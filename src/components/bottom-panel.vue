@@ -20,8 +20,8 @@
 
 <script setup>
 import { nextTick, watch } from 'vue'
-
 import { CountUp } from 'countup.js'
+
 const props = defineProps({
   panelItems: {
     type: Array,
@@ -69,7 +69,6 @@ function startAnimation(panelItems = []) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* padding-top: 40px; */
 }
 
 .bottom-content .item {
@@ -82,7 +81,6 @@ function startAnimation(panelItems = []) {
   flex: 1;
   height: 100%;
   padding: 0 10px 0 35px;
-  /* border: 1px solid red; */
 }
 
 .bottom-content .pan-left {

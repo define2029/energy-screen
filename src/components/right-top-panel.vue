@@ -4,7 +4,7 @@
     <water-ball class="right-water-ball" :percentage="percentage"></water-ball>
     <!-- 2. 图例 -->
     <div class="legend">
-      <template v-for="item in props.panelItems" :key="item">
+      <template v-for="item in panelItems" :key="item">
         <div class="leg-name">
           <span :class="['dot', `area${item.id}`]"></span>
           <span class="name">{{ item.name }}</span>
@@ -21,13 +21,16 @@ import WaterBall from './water-ball.vue'
 const props = defineProps({
   percentage: {
     type: Number,
-    default: 9
+    default: 0
   },
   panelItems: {
     type: Array,
-    default: () => []
+    default: function () {
+      return []
+    }
   }
 })
+console.log(props.panelItems)
 </script>
 
 <style scoped>
