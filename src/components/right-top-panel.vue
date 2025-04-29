@@ -4,7 +4,7 @@
     <water-ball class="right-water-ball" :percentage="percentage"></water-ball>
     <!-- 2. 图例 -->
     <div class="legend">
-      <template v-for="item in panelItems" :key="item">
+      <template v-for="item in props.panelItems" :key="item">
         <div class="leg-name">
           <span :class="['dot', `area${item.id}`]"></span>
           <span class="name">{{ item.name }}</span>
@@ -30,7 +30,6 @@ const props = defineProps({
     }
   }
 })
-console.log(props.panelItems)
 </script>
 
 <style scoped>
